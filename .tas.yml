@@ -4,16 +4,16 @@
 ##6 FIRSTLY - You need to specify which testing framework you are using. Currently supported JS frameworks are : mocha, jest and jasmine.
 framework: junit # mocha # framework should be as per your project
 frameworkVersion: 4
-blocklist:
-  - "org.jenkinsci.remoting.protocol.cert.ValidityCheckingX509ExtendedTrustManagerTest#checkServerTrusted1_nullNonNull"
-  - "org.jenkinsci.remoting.protocol.cert.ValidityCheckingX509ExtendedTrustManagerTest#checkServerTrusted1_nullNonNull"
-  - "org.apache.commons.csv.CSVFormatTest#testWithRecordSeparatorCRLF"
+# blocklist:
+#   - "org.jenkinsci.remoting.protocol.cert.ValidityCheckingX509ExtendedTrustManagerTest#checkServerTrusted1_nullNonNull"
+#   - "org.jenkinsci.remoting.protocol.cert.ValidityCheckingX509ExtendedTrustManagerTest#checkServerTrusted1_nullNonNull"
+#   - "org.apache.commons.csv.CSVFormatTest#testWithRecordSeparatorCRLF"
 preRun:
   # SECONDLY - You need to set the preRun commands. These are shell commands executed inside the root level of your git repository before running the tests. preRun commands are executed using non-login shells by default, so you must explicitly source any dotfiles as part of the command.
-  command:
-    - mvn clean install -Denforcer.skip=true -Dmaven.test.skip=true
-    - mvn compile -Denforcer.skip=true
-    - mvn test-compile -Denforcer.skip=true
+#   command:
+#     - mvn clean install -Denforcer.skip=true -Dmaven.test.skip=true
+#     - mvn compile -Denforcer.skip=true
+#     - mvn test-compile -Denforcer.skip=true
 
 
 postMerge:
