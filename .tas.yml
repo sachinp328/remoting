@@ -4,6 +4,7 @@
 ##7 FIRSTLY - You need to specify which testing framework you are using. Currently supported JS frameworks are : mocha, jest and jasmine.
 framework: junit # mocha # framework should be as per your project
 frameworkVersion: 4
+javaVersion: 11
 # blocklist:
 #   - "org.jenkinsci.remoting.protocol.cert.ValidityCheckingX509ExtendedTrustManagerTest#checkServerTrusted1_nullNonNull"
 #   - "org.jenkinsci.remoting.protocol.cert.ValidityCheckingX509ExtendedTrustManagerTest#checkServerTrusted1_nullNonNull"
